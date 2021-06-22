@@ -19,7 +19,7 @@ app.get("/test", (request, response) => {
 });
 
 app.post("/test-post" , (request, response) => {
-  return response.send("testando o post")
+  return response.send("mensagem com post")
 })
 
 //http://localhost:3000
