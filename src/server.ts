@@ -1,17 +1,14 @@
+
+import "reflect-metadata";
 import express from "express";
+import "./database";
+import { router } from "./routes";
 
 // @types/express
 const app = express();
-
-/**
- * get >> busca de informações
- * post >> inserir uma informação dentro da API(criação de usuarios, tags e etc)
- * put >> alterar uma informação (alteração de dados)
- * delete >> remover um dado 
- * patch >> alterar uma informação específica
- */
-
 //criação de rota
+app.use(express.json());
+app.use(router);
 app.get("/test", (request, response) => {
   //request >> entrando
   //response >> saindo
